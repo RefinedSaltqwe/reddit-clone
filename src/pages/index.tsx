@@ -15,8 +15,6 @@ import { auth, firestore } from '../firebase/clientApp'
 import useCommunityData from '../hooks/useCommunityData'
 import usePosts from '../hooks/usePosts'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
 
   const [user, loadingUser] = useAuthState(auth);
