@@ -173,7 +173,7 @@ const useCommunityData = () => {
             return;
         } 
         getMySnippets(); // Should only trigger when user is available
-    }, [user])
+    }, [user]) // eslint-disable-next-line react-hooks/exhaustive-deps
     //   ↑ user will prevent this function to trigger uneccessarily. Hence, it will only trigger when there's changes. Example logged out or logged in as a new user 
     
     // ↓ Data for [pid] page will be erased when page rehreshes
@@ -184,7 +184,7 @@ const useCommunityData = () => {
         if (communityId && !communityStateValue.currentCommunity){
             getCommunityData(communityId as string);
         }
-    }, [router.query,communityStateValue.currentCommunity])
+    }, [router.query,communityStateValue.currentCommunity]) // eslint-disable-next-line react-hooks/exhaustive-deps
     return {
         //data
         communityStateValue,

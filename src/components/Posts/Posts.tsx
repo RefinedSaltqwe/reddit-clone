@@ -48,7 +48,7 @@ const Posts:React.FC<PostsProps> = ({ communityData }) => {
 
     useEffect(() => {
         getPosts();
-    }, [communityData]);
+    }, [communityData]);// eslint-disable-next-line react-hooks/exhaustive-deps
     //     ↑ This will trigger whenever this data changes. Example when user goes to another community
     return (
         <>

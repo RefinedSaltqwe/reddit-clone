@@ -186,7 +186,7 @@ const usePosts = () => {
     useEffect(() => {
     if (!user?.uid || !currentCommunity) return;
         getCommunityPostVotes(currentCommunity.id);
-    }, [user, currentCommunity]);
+    }, [user, currentCommunity]); // eslint-disable-next-line react-hooks/exhaustive-deps
 
     //CLEAR user post votes if user logs out
     useEffect(() => {
@@ -198,7 +198,7 @@ const usePosts = () => {
           }));
           return;
         }
-      }, [user, loadingUser]);
+      }, [user, loadingUser]); // eslint-disable-next-line react-hooks/exhaustive-deps
     
     return {
         postStateValue,
