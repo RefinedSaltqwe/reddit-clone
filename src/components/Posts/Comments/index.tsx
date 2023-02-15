@@ -146,7 +146,7 @@ const Comments:React.FC<CommentsProps> = ({
         if(!selectedPost) return;
         // console.log("HERE IS SELECTED POST", selectedPost.id);
         getPostComments();
-    }, [selectedPost])
+    }, [selectedPost]) // eslint-disable-next-line react-hooks/exhaustive-deps
 
     return (
         <Box bg="white" p={2} borderRadius="0px 0px 4px 4px">

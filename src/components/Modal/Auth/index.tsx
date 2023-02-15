@@ -24,7 +24,8 @@ const AuthModal:React.FC = () => {
     useEffect(() => {
         if (user) handleClose();
         // console.log(user)
-    }, [user]); // This will trigger whenever the 'user' object changes or when there is logged in user
+    }, [user]); // eslint-disable-next-line react-hooks/exhaustive-deps
+    // This will trigger whenever the 'user' object changes or when there is logged in user
 
     return (
         <>

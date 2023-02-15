@@ -43,7 +43,7 @@ const Directory: React.FC = () => {
         >
           <Flex alignItems="center">
             {directoryState.selectedMenuItem.imageURL ? (
-              <Image src={directoryState.selectedMenuItem.imageURL} borderRadius="full" boxSize="24px" mr={2} />
+              <Image alt="Reddit Image" src={directoryState.selectedMenuItem.imageURL} borderRadius="full" boxSize="24px" mr={2} />
             ) : (
               <Icon 
                 fontSize={24}  

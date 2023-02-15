@@ -21,11 +21,6 @@ const CommunityPage:React.FC<CommunityPageProps> = ({ communityData }) => {
     // console.log("[communityId] - index Data",communityData );
     const setCommunityStateValue = useSetRecoilState(communityState);
     
-    
-    // Community was not found in the database
-    if (!communityData) {
-        return <CommunityNotFound />;
-    }
     //THIS IS WHERE WE SET THE DATA to RECOIL[Global State] WHENEVER we load a community group
     //Set the value to --- import { currentCommunity } from '../../../atoms/communitiesAtom';
     useEffect(() => {
@@ -37,6 +32,10 @@ const CommunityPage:React.FC<CommunityPageProps> = ({ communityData }) => {
       }, [communityData]);
       //      ↑ This will trigger whenever this data changes. Example when user goes to another community
 
+        // Community was not found in the database
+        if (!communityData) {
+            return <CommunityNotFound />;
+        }
     return (
         <>
             <Header communityData={communityData} />

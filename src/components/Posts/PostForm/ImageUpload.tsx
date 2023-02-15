@@ -26,6 +26,7 @@ const ImageUpload:React.FC<ImageUploadProps> = ({
                 src={selectedFile as string}
                 maxWidth="400px"
                 maxHeight="400px"
+                alt="Image"
               />
               <Stack direction="row" mt={4}>
                 <Button height="28px" onClick={() => setSelectedTab("Post")}>

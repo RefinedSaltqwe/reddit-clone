@@ -48,7 +48,8 @@ const PostPage:React.FC = () => {
         if (pid && !postStateValue.selectedPost) { 
             fetchPost(pid as string); //FETCH the selected post, if not exist
         }
-    }, [router.query, postStateValue.selectedPost]); //This function is dependent to router and selected post
+    }, [router.query, postStateValue.selectedPost]); // eslint-disable-next-line react-hooks/exhaustive-deps
+    //This function is dependent to router and selected post
     return (
         <PageContentLayout>
             <>

@@ -28,8 +28,9 @@ const Navbar:React.FC = () => {
                 cursor="pointer"
                 onClick ={() => onSelectMenuItem(defaultMenuItem)}
             >
-                <Image src="/images/redditFace.svg" height="30px" />
+                <Image alt="Image" src="/images/redditFace.svg" height="30px" />
                 <Image
+                alt="Image"
                 display={{ base: "none", md: "unset" }} //Media Query
                 src="/images/redditText.svg"
                 height="46px"
